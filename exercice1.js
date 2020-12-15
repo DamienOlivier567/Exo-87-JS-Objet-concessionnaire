@@ -10,33 +10,16 @@ let voiture = {
     vitesseMaxi : "120km/h"
 };
 
-let nom = document.getElementById('nom');
-nom.innerHTML = voiture.Nom;
-
-let img = document.getElementById('img');
-img.innerHTML = voiture.imgUrl;
-
-let roues = document.getElementById('roues');
-roues.innerHTML = voiture.nombresRoues;
-
-let couleur = document.getElementById('couleurs');
-couleur.innerHTML = voiture.Couleur;
-
-let constructeur = document.getElementById('constructeur');
-constructeur.innerHTML = voiture.Contructeur;
-
-let carburant = document.getElementById('carburant');
-carburant.innerHTML = voiture.Carburant;
-
-let portes = document.getElementById('portes');
-portes.innerHTML = voiture.nombresRoues;
-
-let auto = document.getElementById('autonomie');
-portes.innerHTML = voiture.Autonomie;
-
-let vitesse = document.getElementById('max');
-vitesse.innerHTML = voiture.vitesseMaxi;
-
-
-
-
+let divContainer = document.getElementById("container");
+let img = document.createElement("img");
+img.src = voiture.imgUrl;
+divContainer.append(img);
+divContainer.innerHTML += "<br>";
+divContainer.innerHTML +=  voiture.Nom + "<br>";
+divContainer.innerHTML +=  voiture.nombresRoues + "<br>";
+divContainer.innerHTML +=  voiture.Couleur + "<br>";
+divContainer.innerHTML +=  voiture.Contructeur + "<br>";
+divContainer.innerHTML +=  voiture.Carburant + "<br>";
+divContainer.innerHTML +=  voiture.nombrePortes + "<br>";
+divContainer.innerHTML +=  voiture.Autonomie + "<br>";
+divContainer.innerHTML +=  voiture.vitesseMaxi + "<br>";
